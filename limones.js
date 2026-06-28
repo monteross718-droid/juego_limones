@@ -55,6 +55,7 @@ function actualizarPantalla(){
     dibujarSuelo();
     dibujarPersonaje();
     dibujarLimon();
+    detectarPiso();
 
 }
 function limpiarCanva(){
@@ -91,8 +92,15 @@ function detectarPiso(){
     aparecerLimon();
     vidas=vidas-1;
     mostrarEnSpan("txtVidas",vidas);
+
+if(vidas==0){
+
+alert ("GAME OVER");
+
+}
  }
 
+ 
 }
 
 function aparecerLimon(){
