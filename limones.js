@@ -13,8 +13,10 @@ let limonX=canvas.width/2;
 let limonY=5;
 let puntaje=0;
 let vidas=3;
+let velocidadCaida=100;
 
 function iniciar(){
+setInterval(bajarLimon,velocidadCaida);// recibe como primer parámetro una función como tal y segundo parámetro tiempo en milisegundos  
 dibujarSuelo();
 dibujarPersonaje();
 aparecerLimon();
