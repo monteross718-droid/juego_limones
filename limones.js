@@ -14,10 +14,12 @@ let limonY=5;
 let puntaje=0;
 let vidas=3;
 let velocidadCaida=200;
-let ingervaloCaida;
+let intervalo;
 
 function iniciar(){
-intervaloCaida=setInterval(bajarLimon,velocidadCaida);// recibe como primer parámetro una función como tal y segundo parámetro tiempo en milisegundos  
+clearInterval(intervalo);
+
+intervalo=setInterval(bajarLimon,velocidadCaida);// recibe como primer parámetro una función como tal y segundo parámetro tiempo en milisegundos  
 dibujarSuelo();
 dibujarPersonaje();
 aparecerLimon();
@@ -95,6 +97,8 @@ if(puntaje==6){
     velocidadCaida = 100;
 }
 if(puntaje==10){
+
+    clearInterval(intervalo);
     alert ("GANASTE LA FUNDA DE LOS LIMONES");
 }
 
@@ -110,17 +114,12 @@ ingervaloCaida = setInterval (bajarLimon, velocidadCaida);
 }
 
 function detectarPiso(){
- if(limonY+ALTO_LIMON==canvas.height-ALTURA_SUELO){
-    aparecerLimon();
-    vidas=vidas-1;
-    mostrarEnSpan("txtVidas",vidas);
 
 if(vidas==0){
-
+clearInterval(intervalo);
 alert ("GAME OVER");
 
 }
- }
 
  
 }
