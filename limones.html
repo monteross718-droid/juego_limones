@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Caza Estrellas</title>
   <link rel="stylesheet" href="limones.css"/>
-  <script src="util.js"></script>
+  <script src="utils.js"></script>
 </head>
+
 <body onload="iniciar()">
   <div class="contenedor">
     <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ..... </p>
-    <h2>Autor: Erik Monteros</h2>
+    <p>Si del cielo te caen limones ....</p>
+    <h2> Autor: Erik Monteros</h2>
     <canvas id="areaJuego" width="600" height="400"></canvas>
     <div class="panel">
       <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
+      <p>Vidas:<span id="txtVidas">3</span></p>
     </div>
     <div class="botones">
-      <button onclick="moverIzquierda();">Izquierda</button>
-      <button onclick="moverDerecha();">Derecha</button>
-      
-            <button onclick="reiniciar();">Reiniciar</button>
-            <button class="Game Over" id="lblFinJuego"></button>
+      <button onclick="moverIzquierda()">Izquierda</button>
+      <button onclick="moverDerecha()">Derecha</button>
+      <button onclick="reiniciarJuego()">Reiniciar</button>
     </div>
   </div>
-  <script src="limones.js"></script>
-  
+  <script src="limones.js"></script>    
 </body>
+
 </html>
