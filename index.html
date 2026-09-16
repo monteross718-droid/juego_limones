@@ -1,29 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <title>Caza Estrellas</title>
-  <link rel="stylesheet" href="limones.css"/>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Atrapa los limones antes de que caigan y consigue el mejor puntaje."
+  >
+
+  <title>Atrapar Limones</title>
+
+  <link rel="stylesheet" href="limones.css">
+
   <script src="utils.js"></script>
 </head>
 
 <body onload="iniciar()">
-  <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones ....</p>
-    <h2> Autor: Erik Monteros</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas:<span id="txtVidas">3</span></p>
-    </div>
-    <div class="botones">
-      <button onclick="moverIzquierda()">Izquierda</button>
-      <button onclick="moverDerecha()">Derecha</button>
-      <button onclick="reiniciarJuego()">Reiniciar</button>
-    </div>
-  </div>
-  <script src="limones.js"></script>    
+
+  <main class="contenedor">
+
+    <header class="encabezado">
+
+      <div class="insignia">
+        🍋 MINI JUEGO
+      </div>
+
+      <h1>Atrapar Limones</h1>
+
+      <p class="subtitulo">
+        Si del cielo te caen limones... ¡atrápalos todos!
+      </p>
+
+      <p class="autor">
+        Creado por <strong>Erik Monteros</strong>
+      </p>
+
+    </header>
+
+    <section
+      class="tarjeta-juego"
+      aria-label="Juego Atrapar Limones"
+    >
+
+      <div
+        class="panel"
+        aria-label="Marcador del juego"
+      >
+
+        <p class="dato">
+
+          <span
+            class="icono"
+            aria-hidden="true"
+          >
+            ⭐
+          </span>
+
+          <span class="etiqueta">
+            Puntaje
+          </span>
+
+          <span id="txtPuntaje">
+            0
+          </span>
+
+        </p>
+
+        <p class="dato">
+
+          <span
+            class="icono"
+            aria-hidden="true"
+          >
+            ❤️
+          </span>
+
+          <span class="etiqueta">
+            Vidas
+          </span>
+
+          <span id="txtVidas">
+            3
+          </span>
+
+        </p>
+
+      </div>
+
+      <div class="marco-canvas">
+
+        <canvas
+          id="areaJuego"
+          width="600"
+          height="400"
+        >
+          Tu navegador no admite el elemento canvas.
+        </canvas>
+
+      </div>
+
+      <div
+        class="botones"
+        aria-label="Controles del juego"
+      >
+
+        <button
+          class="boton boton-movimiento"
+          type="button"
+          onclick="moverIzquierda()"
+        >
+          <span aria-hidden="true">←</span>
+          Izquierda
+        </button>
+
+        <button
+          class="boton boton-movimiento"
+          type="button"
+          onclick="moverDerecha()"
+        >
+          Derecha
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <button
+          class="boton boton-reiniciar"
+          type="button"
+          onclick="reiniciarJuego()"
+        >
+          <span aria-hidden="true">↻</span>
+          Reiniciar
+        </button>
+
+      </div>
+
+    </section>
+
+    <p class="ayuda">
+      Usa los botones para mover al jugador y atrapar los limones.
+    </p>
+
+  </main>
+
+  <script src="limones.js"></script>
+
 </body>
 
 </html>
